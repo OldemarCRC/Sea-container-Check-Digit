@@ -1,0 +1,16 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    color: #046a7c;
+    text-align: left;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
+    z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+  }
+  
+  body {
+    padding-top: 60px; /* Asegura que el contenido no quede oculto detrás del header fijo */
+  }
+  
