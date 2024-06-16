@@ -4,7 +4,7 @@ import './header.css';
 function Header() {
   return (
     <header className="header">
-      <h1>OC</h1>
+      <h1>Koodi CRC</h1>
     </header>
   );
 }

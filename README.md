@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="" rel="noopener">
+    <img src="./public/android-chrome-192x192.png" alt="Project logo">
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+[![Status](https://img.shields.io/badge/status-in_development-yellow.svg)]()
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Title
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Container Check Digit Verification App
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This application verifies container numbers based on the Modulus 11 algorithm to check their validity. It accepts user input of container numbers and highlights whether the check digit is correct or incorrect, displaying results in red or green accordingly.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Table of Contents
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Installation](#installation)
+- [Usage](#usage)
+- [User Manual](#user-manual)
+- [Contributing](#contributing)
+- [License](#license)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To install and run the application locally, follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository from GitHub:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git clone https://github.com/yourusername/container-check-digit.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+2. Navigate into the project directory:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+cd container-check-digit
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+3. Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm install
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Start the application:
 
-### Advanced Configuration
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Open your web browser and navigate to `http://localhost:3000`.
 
-### `npm run build` fails to minify
+3. Enter container numbers in the provided input field. You can enter multiple container numbers separated by spaces or new lines.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Click the "Check" button to verify the container numbers.
+
+---
+
+## User Manual
+
+For detailed instructions on how to use the Container Check Digit Verification App, please refer to the [User Manual](USER_MANUAL.md).
+
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository on GitHub.
+
+2. Clone your forked repository:
+
+git clone https://github.com/yourusername/container-check-digit.git
+
+
+3. Create a new branch:
+
+git checkout -b feature/your-feature-name
+
+
+4. Make your changes and commit them:
+
+git commit -am 'Add your commit message'
+
+
+5. Push to the branch:
+
+git push origin feature/your-feature-name
+
+
+6. Submit a pull request with a description of your changes.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+
+

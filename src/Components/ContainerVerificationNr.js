@@ -1,96 +1,79 @@
-/*"Modulus 11 Algorithm" to calculate the check digit of a shipping container*/
-
 import React, { useState } from "react";
+import calculateCheckDigit from "./calculateCheckDigit.js";
 
-function CheckDigit() {
-  const [containerNr, setContainerNr] = useState("");
-  const [checkDigit, setCheckDigit] = useState("");
-  const [containerNrVerified, setContainerNrVerified] = useState("");
+function ContainerVerificationNr() {
+  const [inputText, setInputText] = useState("");
+  const [results, setResults] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  // Objeto con los valores para cada letra
-  const letterValues = {
-    A: 10,
-    B: 12,
-    C: 13,
-    D: 14,
-    E: 15,
-    F: 16,
-    G: 17,
-    H: 18,
-    I: 19,
-    J: 20,
-    K: 21,
-    L: 23,
-    M: 24,
-    N: 25,
-    O: 26,
-    P: 27,
-    Q: 28,
-    R: 29,
-    S: 30,
-    T: 31,
-    U: 32,
-    V: 34,
-    W: 35,
-    X: 36,
-    Y: 37,
-    Z: 38,
-  };
-
-  const calculateCheckDigit = (containerNumber) => {
-    let summa = 0;
-    const upperContainerNumber = containerNumber.toUpperCase();
-    const letters = upperContainerNumber.slice(0, 4);
-    const digits = upperContainerNumber.slice(4, 10);
-    let ii = 1;
-
-    // Calcula la suma para las letras utilizando el objeto letterValues
-    for (let ka = 0; ka < letters.length; ka++) {
-      summa += (letterValues[letters[ka]] || 0) * ii;
-      ii *= 2;
-    }
-
-    // Calcula la suma para los dígitos
-    for (let ka = 0; ka < digits.length; ka++) {
-      summa += parseInt(digits[ka], 10) * ii;
-      ii *= 2;
-    }
-
-    const mod = summa % 11;
-    const difference = mod === 10 ? 0 : mod; // El dígito de verificación es 0 si el módulo es 10
-    return difference;
+  const handleInputChange = (event) => {
+    setInputText(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const calculatedCheckDigit = calculateCheckDigit(containerNr);
-    setCheckDigit(calculatedCheckDigit);
-    setContainerNrVerified(containerNr + calculatedCheckDigit);
-  };
 
-  const handleInputChange = (event) => {
-    const upperCaseValue = event.target.value.toUpperCase();
-    setContainerNr(upperCaseValue);
+    
+    setErrorMessage("");
+
+    // Splits input text into separate lines
+    const containerLines = inputText.trim().split(/\r?\n/);
+
+    // Checks each line to make sure it meets the expected format
+    const newResults = containerLines.map((line) => {
+      const trimmedLine = line.trim();
+      if (trimmedLine.length !== 11) {
+        setErrorMessage("Invalid formatting on one or more lines.");
+        return {
+          containerNr: trimmedLine,
+          isValid: false,
+          message: "Invalid format"
+        };
+      }
+      const actualCheckDigit = parseInt(trimmedLine.slice(-1), 10);
+      const calculatedCheckDigit = calculateCheckDigit(trimmedLine.slice(0, -1));
+      return {
+        containerNr: trimmedLine,
+        actualCheckDigit,
+        calculatedCheckDigit,
+        isValid: actualCheckDigit === calculatedCheckDigit,
+      };
+    });
+
+    
+    if (!errorMessage) {
+      setResults(newResults);
+    }
   };
 
   return (
     <div className="container-verification">
       <h1>Container Check Digit Verification</h1>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={containerNr}
+        <textarea
+          value={inputText}
           onChange={handleInputChange}
-          placeholder="Container ID"
+          placeholder="Enter container numbers separated by new lines"
+          rows="10"
+          cols="50"
         />
         <div className="submit-button">
           <button type="submit">Check</button>
         </div>
       </form>
-      <p>Check Digit: {checkDigit}</p>
-      <p>Container Number: {containerNrVerified}</p>
+      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+      <div className="results">
+        {results.map((result, index) => (
+          <p key={index} style={{ color: result.isValid ? "green" : "red" }}>
+            {result.containerNr}: {result.isValid ? "Valid" : `Invalid (Should be ${result.containerNr.slice(0, -1) + result.calculatedCheckDigit})`}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }
 
-export default CheckDigit;
+export default ContainerVerificationNr;
+
+
+
