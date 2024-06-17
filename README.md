@@ -4,12 +4,6 @@
   </a>
 </p>
 
-<div align="center">
-
-[![Status](https://img.shields.io/badge/status-in_development-yellow.svg)]()
-
-</div>
-
 ---
 
 ## Project Title
