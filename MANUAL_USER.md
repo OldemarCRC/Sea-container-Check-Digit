@@ -1,8 +1,8 @@
-# User Manual for Container Check Digit Verification App
+# User Manual for Sea container Check Digit Verification App
 
 ## Introduction
 
-Welcome to the User Manual for the Container Check Digit Verification App! This manual provides instructions on how to use the application to verify container numbers.
+Welcome to the User Manual for the Sea container Check Digit Verification App! This manual provides instructions on how to use the application to verify container numbers.
 
 ## Using the Application
 
