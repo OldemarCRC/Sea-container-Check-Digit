@@ -12,8 +12,6 @@ function ContainerVerificationNr() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    
     setErrorMessage("");
 
     // Splits input text into separate lines
@@ -27,11 +25,13 @@ function ContainerVerificationNr() {
         return {
           containerNr: trimmedLine,
           isValid: false,
-          message: "Invalid format"
+          message: "Invalid format",
         };
       }
       const actualCheckDigit = parseInt(trimmedLine.slice(-1), 10);
-      const calculatedCheckDigit = calculateCheckDigit(trimmedLine.slice(0, -1));
+      const calculatedCheckDigit = calculateCheckDigit(
+        trimmedLine.slice(0, -1)
+      );
       return {
         containerNr: trimmedLine,
         actualCheckDigit,
@@ -40,32 +40,43 @@ function ContainerVerificationNr() {
       };
     });
 
-    
     if (!errorMessage) {
       setResults(newResults);
     }
   };
 
+  const handleClear = () => {
+    setInputText("");
+    setResults([]);
+    setErrorMessage("");
+  };
+
   return (
     <div className="container-verification">
-      <h1>Container Check Digit Verification</h1>
+      <h1>Sea container Check-digit verification</h1>
       <form onSubmit={handleSubmit}>
         <textarea
           value={inputText}
           onChange={handleInputChange}
-          placeholder="Enter container numbers separated by new lines"
+          placeholder="Enter container numbers separated by new lines with format: ABCU1234567"
           rows="10"
           cols="50"
         />
-        <div className="submit-button">
-          <button type="submit">Check</button>
+        <div className="buttons">
+          <button type="submit" className="button">Check</button>
+          <button type="button" className="button" onClick={handleClear}>Clear</button>
         </div>
       </form>
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       <div className="results">
         {results.map((result, index) => (
           <p key={index} style={{ color: result.isValid ? "green" : "red" }}>
-            {result.containerNr}: {result.isValid ? "Valid" : `Invalid (Should be ${result.containerNr.slice(0, -1) + result.calculatedCheckDigit})`}
+            {result.containerNr}:{" "}
+            {result.isValid
+              ? "Valid"
+              : `Invalid (Should be ${
+                  result.containerNr.slice(0, -1) + result.calculatedCheckDigit
+                })`}
           </p>
         ))}
       </div>
@@ -74,6 +85,3 @@ function ContainerVerificationNr() {
 }
 
 export default ContainerVerificationNr;
-
-
-

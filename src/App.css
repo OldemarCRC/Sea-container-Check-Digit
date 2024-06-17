@@ -29,9 +29,26 @@ textarea {
   box-shadow: rgb(156, 156, 161) 0px 1px 3px 0px;
 }
 
-.submit-button {
-  margin-top: 20px;
+.button {
+  margin-right: 10px;
+  background-color: #046a7c;
+  color: white;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #929090;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.435); /* Sombra más pronunciada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para animar */
+}
 
+.button:hover {
+  background-color: #288b9d; /* Cambio de color al hacer hover */
+  transform: translateY(-2px); /* Efecto de elevación */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al hacer hover */
+  cursor: pointer;
+}
+
+.buttons {
+  margin-top: 10px;
 }
 
 .results p {

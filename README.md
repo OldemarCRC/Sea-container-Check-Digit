@@ -38,7 +38,7 @@ To install and run the application locally, follow these steps:
 
 1. Clone the repository from GitHub:
 
-git clone https://github.com/yourusername/container-check-digit.git
+git clone https://github.com/OldemarCRC/container-check-digit.git
 
 
 2. Navigate into the project directory:
