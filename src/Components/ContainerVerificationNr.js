@@ -14,10 +14,8 @@ function ContainerVerificationNr() {
     event.preventDefault();
     setErrorMessage("");
 
-    // Splits input text into separate lines
     const containerLines = inputText.trim().split(/\r?\n/);
 
-    // Checks each line to make sure it meets the expected format
     const newResults = containerLines.map((line) => {
       const trimmedLine = line.trim();
       if (trimmedLine.length !== 11) {
@@ -29,9 +27,7 @@ function ContainerVerificationNr() {
         };
       }
       const actualCheckDigit = parseInt(trimmedLine.slice(-1), 10);
-      const calculatedCheckDigit = calculateCheckDigit(
-        trimmedLine.slice(0, -1)
-      );
+      const calculatedCheckDigit = calculateCheckDigit(trimmedLine.slice(0, -1));
       return {
         containerNr: trimmedLine,
         actualCheckDigit,
@@ -74,9 +70,7 @@ function ContainerVerificationNr() {
             {result.containerNr}:{" "}
             {result.isValid
               ? "Valid"
-              : `Invalid (Should be ${
-                  result.containerNr.slice(0, -1) + result.calculatedCheckDigit
-                })`}
+              : `Invalid (Should be ${result.containerNr.slice(0, -1) + result.calculatedCheckDigit})`}
           </p>
         ))}
       </div>
