@@ -8,7 +8,7 @@ Welcome to the User Manual for the Sea container Check Digit Verification App! T
 
 1. Open your web browser.
 
-2. Navigate to the URL where the application is hosted (e.g., `https://oldemarcrc.github.io/Sea-container-Check-Digit/`).
+2. Navigate to the URL https://oldemarcrc.github.io/Sea-container-Check-Digit/.
 
 4. On the application interface, you will see a textarea labeled "Enter container numbers separated by new lines."
 
