@@ -55,7 +55,7 @@ npm start
 
 
 
-2. Open your web browser and navigate to `https://oldemarcrc.github.io/Sea-container-Check-Digit/`.
+2. Open your web browser and navigate to https://oldemarcrc.github.io/Sea-container-Check-Digit/.
 
 4. Enter container numbers in the provided input field. You can enter multiple container numbers separated by spaces or new lines.
 
