@@ -11,13 +11,17 @@ body {
 
 .container-verification {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column;
   text-align: center;
   margin: 20px;
-  padding: 30px 0;
+  align-items: center;
+  padding: 30px 0px;
+  max-height: unset;
   min-height: 65vh;
   background-color: hwb(0 85% 14%);
+  background-image: url('./Components/barcoArcoIris.JPG'); /* Ruta relativa a la imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+  background-position: center; /* Centra la imagen de fondo */
 }
 
 textarea {
