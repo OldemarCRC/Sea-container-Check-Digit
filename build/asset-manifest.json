@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Sea-container-Check-Digit/static/css/main.a8e85883.css",
+    "main.css": "/Sea-container-Check-Digit/static/css/main.2f4e1bac.css",
     "main.js": "/Sea-container-Check-Digit/static/js/main.382f4882.js",
     "static/js/787.28ef7772.chunk.js": "/Sea-container-Check-Digit/static/js/787.28ef7772.chunk.js",
+    "static/media/barcoArcoIris.JPG": "/Sea-container-Check-Digit/static/media/barcoArcoIris.068968da1f75ec425afa.JPG",
     "index.html": "/Sea-container-Check-Digit/index.html",
-    "main.a8e85883.css.map": "/Sea-container-Check-Digit/static/css/main.a8e85883.css.map",
+    "main.2f4e1bac.css.map": "/Sea-container-Check-Digit/static/css/main.2f4e1bac.css.map",
     "main.382f4882.js.map": "/Sea-container-Check-Digit/static/js/main.382f4882.js.map",
     "787.28ef7772.chunk.js.map": "/Sea-container-Check-Digit/static/js/787.28ef7772.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8e85883.css",
+    "static/css/main.2f4e1bac.css",
     "static/js/main.382f4882.js"
   ]
 }

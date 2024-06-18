@@ -59,6 +59,7 @@ textarea {
 @media (max-width: 768px) {
   .container-verification {
     padding: 20px 10px;
+    background-image:none;
   }
   
   .button {
