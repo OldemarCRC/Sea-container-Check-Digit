@@ -65,7 +65,7 @@ npm start
 
 ## User Manual
 
-For detailed instructions on how to use the Sea Container Check Digit Verification App, please refer to the [User Manual](USER_MANUAL.md).
+For detailed instructions on how to use the Sea Container Check Digit Verification App, please refer to the [User Manual](MANUAL_USER.md).
 
 
 ## Contributing
