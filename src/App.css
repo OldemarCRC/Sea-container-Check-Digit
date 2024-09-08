@@ -19,9 +19,6 @@ body {
   max-height: unset;
   min-height: 65vh;
   background-color: hwb(0 85% 14%);
-  background-image: url('./Components/barcoArcoIris.JPG'); /* Ruta relativa a la imagen */
-  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
-  background-position: center; /* Centra la imagen de fondo */
 }
 
 textarea {

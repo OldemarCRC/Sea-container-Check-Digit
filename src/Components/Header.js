@@ -1,13 +1,13 @@
 import React from 'react';
 import './header.css';
+import logo from "./check-1.png"
 
 function Header() {
   return (
     <header className="header">
-      <h1>Koodi CRC</h1>
+      <img src={logo} alt="check-digit" />
     </header>
   );
 }
 
 export default Header;
-
