@@ -57,7 +57,7 @@ Note: This will generate a dist/ folder with the optimized files.
 ---
 
 ## 📖 User Manual
-For detailed instructions on how to use the app, please refer to the User [MANUAL_USER.md](#MANUAL_USER.md).
+For detailed instructions on how to use the app, please refer to the User [MANUAL_USER.md](MANUAL_USER.md).
 
 ---
 
@@ -79,6 +79,6 @@ Contributions are welcome!
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](#LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
