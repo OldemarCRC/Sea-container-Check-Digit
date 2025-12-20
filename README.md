@@ -32,24 +32,25 @@ To install and run the application locally, follow these steps:
    git clone [https://github.com/OldemarCRC/Sea-container-Check-Digit.git](https://github.com/OldemarCRC/Sea-container-Check-Digit.git)
 
 2. Navigate into the project directory:
-  ```bash
-  cd Sea-container-Check-Digit
+   ```bash
+   cd Sea-container-Check-Digit
+
 
 3. Install dependencies:
-  ```bash
-  npm install
+   ```bash
+   npm install
 
 ---
 
 ## 💻 Usage
 1. Start the development server:
-  ```bash
-  npm run dev
+   ```bash
+   npm run dev
 
 2. Open in browser: Navigate to http://localhost:5173
 3. Production Build: To create a production-ready bundle:
-  ```bash
-  npm run build
+   ```bash
+   npm run build
   
 Note: This will generate a dist/ folder with the optimized files.
 
