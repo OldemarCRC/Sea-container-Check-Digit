@@ -68,15 +68,18 @@ To install and run the application locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/OldemarCRC/Sea-container-Check-Digit.git
+   ```
 
 2. Navigate into the project directory:
    ```bash
    cd Sea-container-Check-Digit
+   ```
 
 
 3. Install dependencies:
    ```bash
    npm install
+   ```
 
 ---
 
@@ -84,11 +87,13 @@ To install and run the application locally, follow these steps:
 1. Start the development server:
    ```bash
    npm run dev
+   ```
 
 2. Open in browser: Navigate to http://localhost:5173
 3. Production Build: To create a production-ready bundle:
    ```bash
    npm run build
+   ```
   
 Note: This will generate a dist/ folder with the optimized files.
 
@@ -117,6 +122,7 @@ How to deploy changes
 To update the live version, run the following command:
    ```bash
    npm run deploy
+   ```
 
 This script automates the build process with Vite and pushes the dist/ folder to the gh-pages branch.
 
