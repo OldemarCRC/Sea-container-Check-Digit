@@ -115,8 +115,8 @@ Live Demo: https://oldemarcrc.github.io/Sea-container-Check-Digit/
 
 How to deploy changes
 To update the live version, run the following command:
-    ```bash
-    npm run deploy
+   ```bash
+   npm run deploy
 
 This script automates the build process with Vite and pushes the dist/ folder to the gh-pages branch.
 
