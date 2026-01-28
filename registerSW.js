@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/Sea-container-Check-Digit/sw.js', { scope: '/Sea-container-Check-Digit/' })})}
