@@ -1,0 +1,57 @@
+/*
+ * Styles are compiled at build time by Tailwind (no Play CDN), producing a
+ * static, hashed, same-origin stylesheet that satisfies `style-src 'self'`.
+ * Fonts are self-hosted via @fontsource → `font-src 'self'`, no Google Fonts.
+ */
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/inter/latin-800.css";
+@import "@fontsource/jetbrains-mono/latin-500.css";
+@import "@fontsource/jetbrains-mono/latin-700.css";
+@import "@fontsource/jetbrains-mono/latin-800.css";
+
+/* Only scan the files we own (keeps legacy /src/*.jsx out of the build). */
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "./main.js";
+
+/* Class-based dark mode, toggled in memory (no storage). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "OCR B", ui-monospace, monospace;
+  --color-navy: #0f172a;
+  --color-navy-900: #0b1222;
+  --color-ocean: #0284c7;
+}
+
+/* Tailwind v4 defaults borders to currentColor; keep the v3 look. */
+@layer base {
+  *, ::before, ::after { border-color: var(--color-slate-200); }
+  button:not(:disabled) { cursor: pointer; }
+}
+
+/*
+ * SECURITY · Anti-clickjacking (OWASP "frame-busting" pattern).
+ * Everything except <noscript> is hidden until /security-init.js confirms the
+ * page is the top-level window and adds `html.unframed`. If an attacker frames
+ * the page (even with a sandbox that blocks top navigation), it stays blank,
+ * so there is nothing to trick the user into clicking.
+ */
+html:not(.unframed) body > :not(noscript) { display: none !important; }
+
+/* Corrugated steel look for the hero (vertical ridges like a container wall) */
+.ridges {
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 14px, rgba(0,0,0,.18) 14px 16px, rgba(255,255,255,0) 16px 30px),
+    radial-gradient(1200px 400px at 20% -10%, rgba(6,182,212,.25), transparent 60%),
+    radial-gradient(900px 400px at 100% 0%, rgba(2,132,199,.30), transparent 60%);
+}
+.tabular { font-variant-numeric: tabular-nums; }
+
+@keyframes pop { 0% { transform: scale(.85); opacity: .4 } 60% { transform: scale(1.08) } 100% { transform: scale(1); opacity: 1 } }
+.pop { animation: pop .28s ease-out; }
+@media (prefers-reduced-motion: reduce) { .pop { animation: none; } * { transition: none !important; } }
